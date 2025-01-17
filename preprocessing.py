@@ -1,5 +1,5 @@
 import cv2
-import os
+
 
 def load_and_resize(image_path, size=(64, 64)):
     # Load image
