@@ -12,8 +12,15 @@ Detta projekt klassificerar bilder av teckenspråksalfabetet (A-Z) med hjälp av
 - OpenCV
 - scikit-learn
 
+## Dataset
+
+In this project I have used a dataset from Kaggle:
+[SSL_DATASET](https://www.kaggle.com/datasets/isakkarlsson123/ssl-dataset/data).
+
+
 ## Användning
-1. Organisera bilder i mappar enligt `data/A/`, `data/B/`, osv.
-2. Kör programmet:
+
+1. The folders should be organised as: `data/A/`, `data/B/`, etc.
+2. Run the program:
    ```bash
    python main.py
