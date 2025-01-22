@@ -2,12 +2,12 @@
 
 Detta projekt klassificerar bilder av teckenspråksalfabetet (A-Z) med hjälp av Logistic Regression.
 
-## Funktioner
+## Functions
 - Förbehandling av bilder (ändring av storlek och normalisering).
 - Extrahering av egenskaper från bilder.
 - Träning av en klassificeringsmodell för alfabetet.
 
-## Krav
+## Requirements
 - Python 3.8+
 - OpenCV
 - scikit-learn
