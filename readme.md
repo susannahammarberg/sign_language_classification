@@ -1,16 +1,17 @@
 # Sign Language Alphabet Classification
 
-Detta projekt klassificerar bilder av teckenspråksalfabetet (A-Z) med hjälp av Logistic Regression.
+Classify images of the Swedish sign-language hand-alfabet (A-Z).
 
 ## Functions
-- Förbehandling av bilder (ändring av storlek och normalisering).
-- Extrahering av egenskaper från bilder.
-- Träning av en klassificeringsmodell för alfabetet.
+- Preprocessing of images
+- Extract image features
+- Train a model
 
 ## Requirements
 - Python 3.8+
 - OpenCV
 - scikit-learn
+
 
 ## Dataset
 
@@ -18,7 +19,7 @@ In this project I have used a dataset from Kaggle:
 [SSL_DATASET](https://www.kaggle.com/datasets/isakkarlsson123/ssl-dataset/data).
 
 
-## Användning
+## Usage
 
 1. The folders should be organised as: `data/A/`, `data/B/`, etc.
 2. Run the program:
