@@ -34,23 +34,23 @@ def main():
     data_dir = "data/SSL_DATASET/Training/"
     model_path = "model.pkl"
  
-    # # Load label_to_index from the file
-    # with open('label_to_index.json', 'r') as f:
-    #     label_to_index = json.load(f)
+    # Load label_to_index from the file
+    with open('label_to_index.json', 'r') as f:
+        label_to_index = json.load(f)
 
-    # Load the dataset
-    print("Loading dataset")
-    X, y, label_to_index = load_dataset(data_dir)
+    # # Load the dataset
+    # print("Loading dataset")
+    # X, y, label_to_index = load_dataset(data_dir)
+    #
+    # # Train the model
+    # print("Training the model")
+    # model = train_model(X, y)
+    #
+    # # Save model
+    # print("Saving the model")
+    # save_model(model, model_path)
 
-    # Train the model
-    print("Training the model")
-    model = train_model(X, y)
-
-    # Save model
-    print("Saving the model")
-    save_model(model, model_path)
-
-    # Test with an unseen image
+    # Load an unseen image
     print("Load and predict a test image")
     test_image = "data/SSL_DATASET/Test/K/K0.jpg"  # test image example
     img = load_and_resize(test_image)
@@ -61,6 +61,9 @@ def main():
     loaded_model = load_model(model_path)
     prediction = loaded_model.predict(features)
     predicted_label = list(label_to_index.keys())[list(label_to_index.values()).index(prediction[0])]
+
+
+    # Print the prediction
     print(f"Prediction: {predicted_label}")
 
 if __name__ == "__main__":
