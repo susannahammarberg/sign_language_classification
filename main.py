@@ -3,6 +3,10 @@ import numpy as np
 from preprocessing import load_and_resize, normalize_image
 from features import flatten_image
 from model import train_model, save_model, load_model
+import json
+
+import tensorflow as tf
+from tensorflow.keras import layers, models
 
 def load_dataset(data_dir, size=(64, 64)):
     # Load dataset and prepare data
@@ -20,26 +24,34 @@ def load_dataset(data_dir, size=(64, 64)):
             X.append(features)
             y.append(label_to_index[label])
 
+    # Save label_to_index to a file
+    with open('label_to_index.json', 'w') as f:
+        json.dump(label_to_index, f)
+
     return np.array(X), np.array(y), label_to_index
 
 def main():
     data_dir = "data/SSL_DATASET/Training/"
     model_path = "model.pkl"
+ 
+    # # Load label_to_index from the file
+    # with open('label_to_index.json', 'r') as f:
+    #     label_to_index = json.load(f)
 
     # Load the dataset
-    print("Laddar dataset...")
+    print("Loading dataset")
     X, y, label_to_index = load_dataset(data_dir)
 
     # Train the model
-    print("Training the model..")
+    print("Training the model")
     model = train_model(X, y)
 
     # Save model
-    print("Saving the model...")
+    print("Saving the model")
     save_model(model, model_path)
 
     # Test with an unseen image
-    print("Load and predict a test image...")
+    print("Load and predict a test image")
     test_image = "data/SSL_DATASET/Test/K/K0.jpg"  # test image example
     img = load_and_resize(test_image)
     img = normalize_image(img)
