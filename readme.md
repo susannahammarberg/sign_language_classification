@@ -1,6 +1,6 @@
 # Sign Language Alphabet Classification
 
-Classify images of the Swedish sign-language hand-alfabet (A-Z).
+Classify images of the Swedish sign-language hand-alphabet (A-Z).
 
 ## Functions
 - Preprocessing of images
@@ -10,7 +10,8 @@ Classify images of the Swedish sign-language hand-alfabet (A-Z).
 ## Requirements
 - Python 3.8+
 - OpenCV
-- scikit-learn
+- Scikit-learn
+- Tensorflow
 
 
 ## Dataset
